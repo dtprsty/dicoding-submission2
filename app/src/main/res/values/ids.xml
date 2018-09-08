@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="txAwayTeam" type="id" />
+    <item name="txHomeTeam" type="id" />
+    <item name="txHomeScore" type="id" />
+    <item name="txAwayScore" type="id" />
+    <item name="txDate" type="id" />
+</resources>

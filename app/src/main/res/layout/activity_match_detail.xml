@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txDate"
+                android:textColor="@color/blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="date"
+                android:textSize="18sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.androidnetworking.widget.ANImageView
+                        android:id="@+id/homeBadge"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/txHomeTeam"
+                        style="@style/TextContent.Black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:ellipsize="end"
+                        android:hint="team name"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/txHomeScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="VS"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txAwayScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="1"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.androidnetworking.widget.ANImageView
+                        android:id="@+id/awayBadge"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/txAwayTeam"
+                        style="@style/TextContent.Black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:ellipsize="end"
+                        android:hint="team name"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@android:color/black" />
+
+
+        <TextView
+            style="@style/TextContent.Subtitle"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Match Detail" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txHomeGoals"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/TextSpec.Value"
+                    android:layout_weight="1"
+                    android:text="Goals"
+                    android:textStyle="" />
+
+                <TextView
+                    android:id="@+id/txAwayGoals"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txHomeRedCard"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/TextSpec.Value"
+                    android:layout_weight="1"
+                    android:text="Red Cards" />
+
+                <TextView
+                    android:id="@+id/txAwayRedCards"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txHomeYellowCard"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/TextSpec.Value"
+                    android:layout_weight="1"
+                    android:text="Yellow Cards" />
+
+                <TextView
+                    android:id="@+id/txAwayYellowCards"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+            </TableRow>
+
+        </TableLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@android:color/black" />
+
+
+        <TextView
+            style="@style/TextContent.Subtitle"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Lineups" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txHomeGoalKeeper"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/TextSpec.Value"
+                    android:layout_weight="1"
+                    android:text="Goal Keeper" />
+
+                <TextView
+                    android:id="@+id/txAwayGoalKeeper"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txHomeDefense"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/TextSpec.Value"
+                    android:layout_weight="1"
+                    android:text="Defense" />
+
+                <TextView
+                    android:id="@+id/txAwayDefense"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txHomeMidfield"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/TextSpec.Value"
+                    android:layout_weight="1"
+                    android:text="Midfield" />
+
+                <TextView
+                    android:id="@+id/txAwayMidfield"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txHomeForward"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/TextSpec.Value"
+                    android:layout_weight="1"
+                    android:text="Forward" />
+
+                <TextView
+                    android:id="@+id/txAwayForward"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txHomeSubtitutes"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/TextSpec.Value"
+                    android:layout_weight="1"
+                    android:text="Subtitutes" />
+
+                <TextView
+                    android:id="@+id/txAwaySubtitutes"
+                    style="@style/TextSpec.Field"
+                    android:layout_weight="1" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>
